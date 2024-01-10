@@ -1,4 +1,4 @@
-# Classificação: ofereça um pai clássico com Machine Learning
+# Classificação: aprendendo a classificar dados com Machine Learning
 
 ### Módulo 1: Análise Exploratória
 
