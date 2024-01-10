@@ -74,7 +74,7 @@ px.histograma (dados, x = "fez_emprestimo", text_auto = True, color = "aderencia
 
 [Captura de tela 2024-01-09 221218!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/3456aab1-8414-467b-b330-13200fa11e37)
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ----------------------
 
 # Anotações
 
@@ -89,11 +89,11 @@ São características que não possuem valores quantitativos e definidos por cat
 Variáveis nominais: não existe ordenação entre categorias. Exemplo: sexo biológico, pais, rotatividade.
 Variáveis ordinais: existe um ordem entre como categorias. Exemplo: escolaridade, mês."""
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ----------------------
 
 # Continuação dos Gráficos:
 
-O grafico a seguir mais uma distribuição das idades (no eixo x) em relação a uma variada "aderencia_investimento", utilizando caixas (caixas) que representam uma mediana "aderencia_investimento". Esse dispositivo permanente como uma identificação é distribuída em diferentes níveis ou categorias de produtos ao investimento. Os graficos a seguir vão seguir ou mesmo padrão de racicinio.
+O grafico a seguir mais uma distribuição das idades (no eixo x) em relação a uma variável "aderencia_investimento", utilizando caixas (caixas) que representam uma mediana "aderencia_investimento". Esse dispositivo permanente como uma identificação é distribuída em diferentes níveis ou categorias de produtos ao investimento. Os graficos a seguir vão seguir ou mesmo padrão de racicinio.
 
 px.box (dados, x = "idade", cor = "aderencia_investimento")
 
@@ -112,6 +112,16 @@ px.box (dados, x = "numero_contatos", cor = "aderencia_investimento")
 
 [Captura de tela 2024-01-09 223108!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/b804a5c7-3722-47cd-87d7-f7c4e89447fe)
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ----------------------
 
 # Módulo 2: Transforma de Dados
+
+
+
+
+
+
+
+
+
+
