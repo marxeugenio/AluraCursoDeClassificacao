@@ -9,7 +9,7 @@ Comentários com uma biblioteca de pandas para um arquiador CSV chamado "marketi
 
 Logo após o registro dos dados, não é apresentado como 5 itens e como 5 ultimas do DataFrame, mas não é uma série ou um dispositivo para termos de uma certeza se você está usando o pai. Não há informações adicionais sobre o DataFrame ou como dados.info () ajuda muito, pois o pai.info () oferece uma visão mais rápida, informações mais detalhadas 
 
-![Captura de tela 2024-01-08 232840] (https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/85e7012c-1adf-4649-ad78-fccfa34ad729)
+![Captura de tela 2024-01-08 232840](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/85e7012c-1adf-4649-ad78-fccfa34ad729)
 
 
 como o número total de entradas, os tipos de dados em cada coluna e seus valores nulos.
@@ -48,7 +48,7 @@ px.histograma (dados, x = "aderencia_investimento", text_auto = True)
 
 Você pode obter um gráfico de barras no total de anúncios nos investimentos, como uma coluna Sim e outros Não .
 
-[Captura de tela 2024-01-09 214652!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/38d0580c-ad81-4951-87c3-861fbe1f45bc)
+![Captura de tela 2024-01-09 214652](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/38d0580c-ad81-4951-87c3-861fbe1f45bc)
 
 
 A seguir, tarifa mais um teste utilizado ou seguir comando :
@@ -57,7 +57,7 @@ px.histograma (dados, x = "estado_civil", text_auto = True, color = "aderencia_i
 
 Que pegam apenas uma coluna está sujeita a uma base de dados e comparação com pessoas que são solteiras, casas e divisões, e uma maioria é uma diferença de qualidade que é mais adepto de um produto ou investimento
 
-[!Captura de tela 2024-01-09 215517](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/d55983bf-71f9-4120-bbe1-3057e9c7c77b)
+![Captura de tela 2024-01-09 215517](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/d55983bf-71f9-4120-bbe1-3057e9c7c77b)
 
 
 E seguindo essa mesma analogia testamos todas as possibilidades / colunas da nossa base de dados :
