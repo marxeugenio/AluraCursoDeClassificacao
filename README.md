@@ -1,4 +1,4 @@
-# Classificação: ofereça um pai clássico com Machine Learning
+![image](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/01362131-8f16-4e20-a8b7-e166d27da5c6)# Classificação: ofereça um pai clássico com Machine Learning
 
 ### Módulo 1: Análise Exploratória
 
@@ -64,17 +64,17 @@ E seguindo essa mesma analogia testamos todas as possibilidades / colunas da nos
 
 px.histograma (dados, x = "escolaridade", text_auto = True, color = "aderencia_investimento", barmode = "group")
 
-![Captura de tela 2024-01-09 215638](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/f2630512-d089-41c3-9eac-ab0791d686d3)
+[Captura de tela 2024-01-09 215638!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/f2630512-d089-41c3-9eac-ab0791d686d3)
 
 px.histograma (dados, x = "inadimplencia", text_auto = True, color = "aderencia_investimento", barmode = "group")
 
-![Captura de tela 2024-01-09 215708](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/844c1683-6db2-49d1-871c-6670540d717d)
+[Captura de tela 2024-01-09 215708!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/844c1683-6db2-49d1-871c-6670540d717d)
 
 px.histograma (dados, x = "fez_emprestimo", text_auto = True, color = "aderencia_investimento", barmode = "group")
 
-![Captura de tela 2024-01-09 221218](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/3456aab1-8414-467b-b330-13200fa11e37)
+[Captura de tela 2024-01-09 221218!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/3456aab1-8414-467b-b330-13200fa11e37)
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ------------------ ------------------ ----------------------
 
 # Anotações
 
@@ -89,39 +89,102 @@ São características que não possuem valores quantitativos e definidos por cat
 Variáveis nominais: não existe ordenação entre categorias. Exemplo: sexo biológico, pais, rotatividade.
 Variáveis ordinais: existe um ordem entre como categorias. Exemplo: escolaridade, mês."""
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ------------------ ----------------------
 
-# Continuação dos Gráficos:
+# Continuação dos Gráficos :
 
-O grafico a seguir mais uma distribuição das idades (no eixo x) em relação a uma variedade de "aderencia_investimento", utilizando caixas (caixas) que representam uma mediana "aderencia_investimento". Esse dispositivo permanente como uma identificação é distribuída em diferentes níveis ou categorias de produtos ao investimento. Os graficos a seguir vão seguir ou mesmo padrão de racicinio.
+O grafico a seguir mais uma distribuição das idades (no eixo x) em relação a uma variada de "aderencia_investimento", utilizando caixas (caixas) que representam uma mediana "aderencia_investimento". Esse dispositivo permanente como uma identificação é distribuída em diferentes níveis ou categorias de produtos ao investimento. Os graficos a seguir vão seguir ou mesmo padrão de racicinio.
 
 px.box (dados, x = "idade", cor = "aderencia_investimento")
 
-![Captura de tela 2024-01-09 222734](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/6fb5ad07-7f3e-483a-bdb0-836d762b7171)
+[Captura de tela 2024-01-09 222734!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/6fb5ad07-7f3e-483a-bdb0-836d762b7171)
 
 
 px.box (dados, x = "saldo", cor = "aderencia_investimento")
 
-![imagem](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/62dc87c3-2a11-40e8-ad19-20a92a16f169)
+[imagem!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/62dc87c3-2a11-40e8-ad19-20a92a16f169)
 
 px.box (dados, x = "tempo_ult_contato", cor = "aderencia_investimento")
 
-![Captura de tela 2024-01-09 223000](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/6673b8d1-fe98-401c-8794-7c2e270eb857)
+[Captura de tela 2024-01-09 223000!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/6673b8d1-fe98-401c-8794-7c2e270eb857)
 
 px.box (dados, x = "numero_contatos", cor = "aderencia_investimento")
 
-![Captura de tela 2024-01-09 223108](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/b804a5c7-3722-47cd-87d7-f7c4e89447fe)
+[Captura de tela 2024-01-09 223108!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/b804a5c7-3722-47cd-87d7-f7c4e89447fe)
 
----------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ------------------ ----------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ------------------ ------------------ ------------------ ------------------ ------------------ ----------------------
 
 # Módulo 2: Transforma de Dados
 
+Aqui nós estamos importando novamente uma base de dados :
+
+importar pandas como pd 
+
+dados = pd.read_csv (r "C: \ Usuários \ marx \ OneDrive \ Área de Trabalho \ Alura2024 \ ClassificaçãoAprendendoaClassificarDadoscomMachineLearning \ marketing_investimento.csv")
+
+dados
+
+[!Captura de tela 2024-01-11 213834](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/66c7dd31-53c9-4b1d-99bf-9561a75c15bd)
+
+E em seguida basicamente iremos excluir a coluna 'aderencia_investimento' mas estaremos add essa alteração a X e adicionando essa coluna excluida para Y :
+
+x = dados.drop("aderencia_investimento", axis = 1)
+y = dados["aderencia_investimento"]
+
+x
+
+![Captura de tela 2024-01-11 214151](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fecd1c30-ef42-45f3-884d-6b6a20153100)
+
+e agora Y :
+
+![Captura de tela 2024-01-11 214255](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/ae2072a8-b483-4394-bbf7-c637380b65ff)
 
 
+A seguir o código utiliza a biblioteca scikit-learn para aplicar a codificação one-hot em colunas específicas de um conjunto de dados x. Ele cria um transformador de colunas usando make_column_transformer, onde o OneHotEncoder é aplicado a determinadas colunas categóricas. O parâmetro drop="if_binary" evita uma redundância ao lidar com variáveis binárias. O resultado da transformação é armazenado na variável x.
+
+from sklearn.compose import make_column_transformer
+from sklearn.preprocessing import OneHotEncoder
+
+colunas = x.columns
+one_hot = make_column_transformer((
+    OneHotEncoder(drop = "if_binary"),
+    ["estado_civil","escolaridade","inadimplencia","fez_emprestimo"]
+),
+    remainder = "passthrough",
+    sparse_threshold=0)
+
+x = one_hot.fit_transform(x)
+
+one_hot.get_feature_names_out(colunas)
+
+![Captura de tela 2024-01-11 214850](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/1c672699-b0a1-4010-84cf-681bd7a68546)
 
 
+O código cria um DataFrame do pandas a partir do conjunto de dados transformado x após a aplicação da codificação one-hot. Ele usa os nomes das colunas obtidos após a transformação, tornando o DataFrame pronto para análise ou treinamento de modelos com as colunas codificadas.
+
+pd.DataFrame(x, columns = one_hot.get_feature_names_out(colunas))
+
+![Captura de tela 2024-01-11 215357](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fd986250-39ee-4090-b84f-c7fb3190ed33)
+
+Este trecho de código utiliza o LabelEncoder da biblioteca scikit-learn para transformar os rótulos de classe em valores numéricos
+
+from sklearn.preprocessing import LabelEncoder
+
+label_ecoder = LabelEncoder()
+
+y  = label_ecoder.fit_transform(y)
+
+y
+
+Resultado: 
+
+[0 1 0 2]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Modulo 3 : Ajustando Modelo
 
 
-
+Divisão de treino e teste para realizar essa separação dos dados, utilizaremos uma função da biblioteca scikit-learn, conhecida como train_test_split(). Primeiramente, vamos importar a função.
 
 
