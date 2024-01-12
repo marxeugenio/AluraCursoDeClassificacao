@@ -1,4 +1,4 @@
-![image](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/01362131-8f16-4e20-a8b7-e166d27da5c6)# Classificação: ofereça um pai clássico com Machine Learning
+![image](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/01362131-8f16-4e20-a8b7-e166d27da5c6)# Classificação: uma vez um pai clássico com Machine Learning
 
 ### Módulo 1: Análise Exploratória
 
@@ -128,63 +128,117 @@ dados
 
 E em seguida basicamente iremos excluir a coluna 'aderencia_investimento' mas estaremos add essa alteração a X e adicionando essa coluna excluida para Y :
 
-x = dados.drop("aderencia_investimento", axis = 1)
+x = dados.drop ("aderencia_investimento", eixo = 1)
 y = dados["aderencia_investimento"]
 
 x
 
-![Captura de tela 2024-01-11 214151](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fecd1c30-ef42-45f3-884d-6b6a20153100)
+[Captura de tela 2024-01-11 214151!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fecd1c30-ef42-45f3-884d-6b6a20153100)
 
-e agora Y :
+e ágora Y:
 
-![Captura de tela 2024-01-11 214255](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/ae2072a8-b483-4394-bbf7-c637380b65ff)
+[Captura de tela 2024-01-11 214255!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/ae2072a8-b483-4394-bbf7-c637380b65ff)
 
 
-A seguir o código utiliza a biblioteca scikit-learn para aplicar a codificação one-hot em colunas específicas de um conjunto de dados x. Ele cria um transformador de colunas usando make_column_transformer, onde o OneHotEncoder é aplicado a determinadas colunas categóricas. O parâmetro drop="if_binary" evita uma redundância ao lidar com variáveis binárias. O resultado da transformação é armazenado na variável x.
+Um guia de código utiliza uma biblioteca de pesquisa de código para aplicar uma codificação única em colunas específicas de um conjunto de dados x. Ele cria um transformador de colunas usando make_column_transformer, e o OneHotEncoder é aplicado a determinadas colunas categóricas. O parâmetro drop = "if_binary" evita um redundância ao lidar com variáveis binárias. O resultado da transformação é blindado na variável x.
 
-from sklearn.compose import make_column_transformer
-from sklearn.preprocessing import OneHotEncoder
+de sklearn.compose import make_column_transformer
+de sklearn.preprocessing import OneHotEncoder
 
 colunas = x.columns
-one_hot = make_column_transformer((
-    OneHotEncoder(drop = "if_binary"),
-    ["estado_civil","escolaridade","inadimplencia","fez_emprestimo"]
+one_hot = make_column_transformer ((
+ OneHotEncoder (drop = "if_binary")
+    ["estado_civil", "escolaridade", "inadimplencia", "fez_emprestimo"]
 ),
-    remainder = "passthrough",
-    sparse_threshold=0)
+ restante = "passthrough",
+ sparse_threshold = 0)
 
-x = one_hot.fit_transform(x)
+x = one_hot.fit_transform (x)
 
-one_hot.get_feature_names_out(colunas)
+one_hot.get_feature_names_out (colunas)
 
-![Captura de tela 2024-01-11 214850](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/1c672699-b0a1-4010-84cf-681bd7a68546)
+[Captura de tela 2024-01-11 214850!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/1c672699-b0a1-4010-84cf-681bd7a68546)
 
 
-O código cria um DataFrame do pandas a partir do conjunto de dados transformado x após a aplicação da codificação one-hot. Ele usa os nomes das colunas obtidos após a transformação, tornando o DataFrame pronto para análise ou treinamento de modelos com as colunas codificadas.
+O código cria um DataFrame para uma parte do conjunto de dados transformados x uma aplicação da codificação única. Ele usa os nomes das colunas obtidas após uma transformação, rasgado o DataFrame pronto para análise ou tratamento de modelos com colunas codificadas.
 
-pd.DataFrame(x, columns = one_hot.get_feature_names_out(colunas))
+pd.DataFrame (x, colunas = one_hot.get_feature_names_out (colunas))
 
-![Captura de tela 2024-01-11 215357](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fd986250-39ee-4090-b84f-c7fb3190ed33)
+[Captura de tela 2024-01-11 215357!](https://github.com/marxeugenio/AluraCursoDeClassificacao/assets/78555292/fd986250-39ee-4090-b84f-c7fb3190ed33)
 
-Este trecho de código utiliza o LabelEncoder da biblioteca scikit-learn para transformar os rótulos de classe em valores numéricos
+Este é o código de utilização utilizado pelo LabelEncoder da biblioteca scikit-learn para transformar os papéis da classe em valores numéricos
 
-from sklearn.preprocessing import LabelEncoder
+de sklearn.preprocessing import LabelEncoder
 
-label_ecoder = LabelEncoder()
+label_ecoder = LabelEncoder ()
 
-y  = label_ecoder.fit_transform(y)
+y = label_ecoder.fit_transform (y)
 
 y
 
-Resultado: 
+Resultado : 
 
 [0 1 0 2]
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- --------------------------
 
-# Modulo 3 : Ajustando Modelo
-
-
-Divisão de treino e teste para realizar essa separação dos dados, utilizaremos uma função da biblioteca scikit-learn, conhecida como train_test_split(). Primeiramente, vamos importar a função.
+# Módulo 3: Ajustando Modelo
 
 
+Divisão de trabalho e teste para realizar essa separação de dados, utilizando uma diversidade da biblioteca scikit-learn, conhecida como train_test_split (). Primeiros, vamos importar uma diversão.
+
+de sklearn.model_selection import train_test_split
+
+Após fez uma importação, podemos dividir os nossos dados. Isso será feito armazenando uma parte dos pais para o treino e o outro para o teste. Faremos isso tanto quanto x quanto para y, que são variados explicativos e alvo.
+
+x_treino, x_teste, y_treino, y_teste = train_test_split (x, y, estratify = y, random_state = 5)
+
+Já tem uma base de dados separados em partes: um para tratamento do modelo, nenhum modelo de comparação ou apresentação de dados e realização como classificações; e um outro para o teste do modelo, sobre vamos avaliar o desempenho do modelo, realizar comodificações e comparações com os resultados que são na base de teste. Assim, vamos verificar se o modelo está disponível como classificações correcionais.
+
+### Modelo de base
+
+Para os arquivos do processo de modelagem, vamos chegar com o modelo mais simples possível, classificador de manequim chamado. Esse algoritmo classifica todos os registros da base de dados com base na categoria de variação de maior frequência, ou seja, que tem um contágio maior na base de dados.
+
+Na análise exploratória, verificados que uma classe com mais frequência é uma que não é um investimento. Logo, é mais provável que uma pessoa não faça parte de um investimento do que o contrário. Uma idéia do algoritmo é justamente essa.
+
+Ele não considera as características da pessoa na variância explicativa. O algoritmo sempre foi realizado para classificar a quantidade de peso pelo valor "Não", que é o valor 0, transformado pelo LabelEncoder.
+
+Pode cirurgir uma dúvida: esse algoritmo não é possível assim, porque ele não está disponível para determinar uma classificação do cliente. Ele simplifica vai chutar ou mesmo valor. De fato, ele não será um algoritmo utilizado no mundo real para o jogo como classificações. Não há entanto, será importante para termos um critério de comparação para outros modelos mais complexos que vamos usar.
+
+Se um modelo mais complexo não apresenta um método mais simples que o modelo base (classificador de manequim), que simplifica as tarefas como classificações, entre o modelo que é um modelo complexo que não é usado para ser utilizado. Ele cria muitas regras para fazer uma classificação, mas não tem um valor que parece ser o modelo básico.
+
+Para chegar, vamos importar o modelo DummyClassifier para confirmar a classificação de uma parte do jogo. Novamente, vamos utilizar uma biblioteca de pesquisa de conteúdo para criar uma importação de diversão e utilização de algoritmos de análise.
+
+Na primeira célula, vamos escrever ou seguinte comando :
+
+de sklearn.dummy import DummyClassifier
+
+Esse será o processo para os algoritmos do scikit-learn, que sempre tem uma idéia de utilização. Primeiro, vamos inicializar ou modelar. Assim, um par de algoritmos, inicializa um modelo que vai armazenar em um variável. Vamos chamar essa varia de manequim. Então, vamos descobrir que manequim será igual a DummyClassifier ().
+
+manequim = DummyClassifier ()
+
+Da mesma forma que os dispositivos com o OneHotEnconder e LabelEncoder que utilizam. Nenhum item oficial é modelo para a diversão DummyClassifier (), depois, a partir de, ele se ajusta a nós dados.
+
+Para fazer isso, digitemos na mesma célula, na linha abixo, ou como dummy.fit (), diversão responsável por render ou pelo pai dos pais. Nenhum algoritmo de caso desse, qual será o valor do produto?
+
+Ele vai para um nível variável e específico qual é uma categoria mais presente na base de dados. Com base na categoria, ele vai realizar como classificações a partir de. Portante, para esse método fit (), vamos passar os dados do tratamento. Da mesma forma, vamos passar x_treino e y_treino.
+
+manequim = DummyClassifier ()
+dummy.fit (x_treino, y_treino)
+
+Você pode escolher: por que os requisitos passam x_treino, se não houver um modelo, ele vai se render aos resultados da variação alvo, que é o y?
+
+Porque ele também precisa compreender quais são as colunas para fazer uma classificação. Ele armazena essas informações na mesma ordem das colunas; foram transformadas como criaram como novas colunas com o OneHotEncoder.
+
+Ele vai armazenar que, para realizar essa classificação, ele precisa das categorias, daquelas características. Por fim, depôis que utilizamos o fit (), uma regra para realizar uma classificação de técnica armada em um manequim variável. Após isso, podemos avaliar como será o desempenho desse modelo nos dados de teste. Como Fazemos isso?
+
+Pegamos um manequim variável seguida de .score (). Essa diversão vai gerar um imposto de acesso ao modelo. Portante, para fazer esse score (), passamos o x_teste e y_teste. O que será utilizado com x_teste e y_teste?
+
+O modelo vai realizar uma classificação de novos pais a partir de x_teste. Após obter os resultados de 0 e 1, que são variados, ele compara ou resulta com y_teste. Ele vai fazer uma comparação de linhas e verificá-lo como um imposto de acesso, que será um porcentagem entre 0 e 1.
+
+manequim = DummyClassifier ()
+dummy.fit (x_treino, y_treino)
+
+dummy.score (x_teste, y_teste)
+
+Ao executar esse código, obtenha um imposto de 0,60. Isso significa que, em 60% das vezes, esse modelo realiza uma classificação de forma correta. Justamente porque, sem equilíbrio da variação alvo, existem 60% dos dados da classe "Não" e 40% da classe "Sim". Como ele disse como enviar a classe "Não", tem um resultado de 60% de acerto.
